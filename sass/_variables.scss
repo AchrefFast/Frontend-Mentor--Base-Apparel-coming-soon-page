@@ -1,0 +1,19 @@
+$colors: (
+    pr-desaturated-red: hsl(0, 36%, 70%),
+    pr-soft-red: hsl(0, 93%, 68%),
+    pr-light-red: hsl(0, 100%, 90%),
+    nt-dard-grayish-red: hsl(0, 6%, 24%),
+    gradient-pink-light: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%),
+    gradient-pink-dark: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%),
+
+);
+
+$f-size-title: 2.6rem;
+$f-size-pr: 0.875rem;
+$f-size-input: 1rem;
+
+$f-weight-light: 300;
+$f-weight-regular: 400;
+$f-weight-bold: 600;
+
+$f-border-radius-input: 35px;

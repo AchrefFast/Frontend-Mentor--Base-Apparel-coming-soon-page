@@ -1,0 +1,317 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, *::-webkit-input-placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body, *:-ms-input-placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body, *::-ms-input-placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body, *::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contianer {
+  background: linear-gradient(135deg, white 0%, #fff5f5 100%);
+  min-height: 100vh;
+}
+
+.hero__image {
+  margin-bottom: -10px;
+}
+
+.hero__image img {
+  width: 100%;
+  height: auto;
+}
+
+.hero__logo {
+  width: 100%;
+  padding: 2em;
+}
+
+.hero__logo img {
+  width: 35%;
+  height: auto;
+}
+
+.hero__content {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+  row-gap: 1.6rem;
+  padding-inline: 2em;
+  padding-bottom: 4.5em;
+  padding-top: 3em;
+}
+
+.hero__content .hero__title {
+  margin-top: 1rem;
+  font-size: 2.6rem;
+  letter-spacing: .4ch;
+  text-transform: uppercase;
+  width: 11ch;
+  line-height: 1;
+  color: #413a3a;
+}
+
+.hero__content .hero__title--styled {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.hero__content .hero__about {
+  font-size: 0.875rem;
+  color: #ce9797;
+  line-height: 1.5;
+}
+
+.hero__content .hero__email {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.hero__content .hero__email .hero__email__input {
+  padding: 15px 22px 10px 22px;
+  background: transparent;
+  min-height: 30px;
+  width: 100%;
+  margin: auto;
+  border: 1px solid #fae1f1;
+  border-radius: 35px;
+  outline: none;
+  font-size: 1rem;
+  color: #413a3a;
+}
+
+.hero__content .hero__email .hero__email__input:focus {
+  outline: 2px solid #ce9797;
+  font-style: italic;
+}
+
+.hero__content .hero__email .hero__email__input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.hero__content .hero__email .hero__email__input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.hero__content .hero__email .hero__email__input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.hero__content .hero__email .hero__email__input::placeholder {
+  color: #ce9797;
+}
+
+.hero__content .hero__email .hero__email__button {
+  border: none;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  position: absolute;
+  border-radius: 35px;
+  top: -2px;
+  bottom: -2px;
+  right: -5px;
+  min-width: 60px;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 15px 45px #ce9797;
+          box-shadow: 0 15px 45px #ce9797;
+}
+
+.hero__content .hero__email .hero__email__button:hover {
+  background: #ffcccc;
+  cursor: pointer;
+}
+
+.hero__content .hero__email .hero__email__error {
+  display: none;
+  position: absolute;
+  right: 65px;
+  top: 25%;
+}
+
+@media (min-width: 400px) {
+  .hero__content .hero__email .hero__email__error {
+    top: 30%;
+    right: 100px;
+  }
+}
+
+.hero__content .hero__email .hero__email__error--p {
+  display: none;
+  position: absolute;
+  left: 20px;
+  bottom: -30px;
+  font-size: .8rem;
+  text-align: left;
+  color: #f96262;
+}
+
+.footer {
+  font-size: 10px;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+@media (min-width: 500px) {
+  :root {
+    font-size: 1.3rem;
+  }
+  *::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  *:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  *::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  *::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .hero__image img {
+    height: 70vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top center;
+       object-position: top center;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    font-size: clamp(1.2rem, 1vw, 2.2rem);
+  }
+  *::-webkit-input-placeholder {
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+  }
+  *:-ms-input-placeholder {
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+  }
+  *::-ms-input-placeholder {
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+  }
+  *::placeholder {
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+  }
+  .contianer {
+    margin: 0 auto;
+    background-color: linear-gradient(135deg, white 0%, #fff5f5 100%);
+    background: url(../images/bg-pattern-desktop.svg), linear-gradient(135deg, white 0%, #fff5f5 100%);
+    background-size: 62.5% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+  }
+  .row {
+    width: 100vw;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.03fr 1fr;
+        grid-template-columns: 1.03fr 1fr;
+        grid-template-areas: "header image" "content image" "content image";
+    padding-left: 6vw;
+  }
+}
+
+@media (min-width: 900px) and (min-width: 1100px) {
+  .row {
+    padding-left: 12vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .row .hero__logo {
+    margin-top: 2vh;
+    grid-area: header;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0;
+  }
+  .row .hero__logo img {
+    width: 24%;
+  }
+  .row .hero__image {
+    grid-area: image;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .row .hero__image img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top left;
+       object-position: top left;
+  }
+  .row .hero__content {
+    background: none;
+    padding: 0;
+    grid-area: content;
+    justify-items: flex-start;
+    text-align: left;
+    max-width: 75%;
+    margin: 0;
+    place-items: flex-start;
+    place-content: flex-start;
+    row-gap: 1.8em;
+  }
+  .row .hero__content .hero__title {
+    font-size: 3.4rem;
+    margin-top: 10vh;
+    letter-spacing: .4ch;
+  }
+  .row .hero__content .hero__about {
+    line-height: 1.8;
+    padding-right: 4vw;
+  }
+  .row .hero__content .hero__email {
+    max-width: 95%;
+  }
+  .row .hero__content .hero__email .hero__email__input {
+    font-size: 14px;
+    padding-block: 1.3em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

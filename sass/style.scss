@@ -1,0 +1,281 @@
+@import 'variables';
+@import 'functions';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, *::placeholder{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+}
+
+.contianer{
+    background: color(gradient-pink-light);
+    min-height: 100vh;
+}
+
+.hero__image {
+
+    margin-bottom: -10px;
+    img{
+        width: 100%; 
+        height: auto;
+    }
+
+}
+
+
+.hero__logo{
+    width: 100%;
+    padding: 2em;
+    img{
+        width:35%;
+        height: auto;
+    }
+}
+
+.hero__content{
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    text-align: center;
+    row-gap: 1.6rem;
+    padding-inline: 2em;
+    padding-bottom: 4.5em;
+    padding-top: 3em;
+
+    .hero__title{
+        margin-top: 1rem;
+        font-size: $f-size-title;
+        letter-spacing: .4ch;
+        text-transform: uppercase;
+        width: 11ch;
+        line-height: 1;
+        color: color(nt-dard-grayish-red);
+    }
+
+    .hero__title--styled{
+        font-weight: $f-weight-light;
+        color: color(pr-desaturated-red);
+    }
+
+    .hero__about{
+        font-size: $f-size-pr;
+        color: color(pr-desaturated-red);
+        line-height: 1.5;
+    }
+
+    .hero__email{
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+
+        .hero__email__input{
+            padding: 15px 22px 10px 22px;
+            background: transparent;
+            min-height: 30px;
+            width: 100%;
+            margin: auto;
+            // border: none;
+            border: 1px solid rgb(250, 225, 241);
+            border-radius: $f-border-radius-input;
+            outline: none;
+            font-size: 1rem;
+            color: color(nt-dard-grayish-red);
+            
+            &:focus{
+                outline: 2px solid color(pr-desaturated-red);
+                font-style: italic;
+            }
+
+            &::placeholder{
+                color: color(pr-desaturated-red);
+            }
+        }
+
+
+        .hero__email__button{
+            border: none;
+            background: color(gradient-pink-dark);
+            position: absolute;
+            border-radius: $f-border-radius-input;
+            top: -2px;
+            bottom: -2px;
+            right: -5px;
+            min-width: 60px;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 15px 45px color(pr-desaturated-red);
+
+            &:hover{
+                background: color(pr-light-red);
+                cursor: pointer;
+            }
+
+        }
+
+        .hero__email__error{
+            display: none;
+            position: absolute;
+            right: 65px;
+            top: 25%;
+
+            
+            @media (min-width: 400px){
+                top: 30%;
+                right: 100px;
+            }
+        }
+
+        .hero__email__error--p{
+            display: none;
+            position: absolute;
+            left: 20px;
+            bottom: - 30px;
+            font-size: .8rem;
+            text-align: left;
+            color: color(pr-soft-red);
+        }
+    }
+}
+
+.footer{
+    font-size: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+@media(min-width: 500px){
+    :root{
+        font-size: 1.3rem;
+    }
+
+    *::placeholder{
+        font-size: 1rem;
+
+    }
+}
+
+
+@media(min-width: 700px){
+
+    .hero__image{
+        img{
+            height: 70vh;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+}
+
+@media(min-width: 900px){
+
+    :root{
+        font-size: clamp(1.2rem, 1vw, 2.2rem);
+    }
+
+    *::placeholder{
+        font-size: clamp(0.8rem, 1vw, 1.5rem);
+    }
+
+    .contianer{
+        margin: 0 auto;
+        background-color: color(gradient-pink-light);
+        background: url(../images/bg-pattern-desktop.svg),color(gradient-pink-light);
+        background-size: 62.5% 100%;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+       
+    }
+
+    .row{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1.03fr 1fr;
+        // grid-template-rows: minmax(100px, 250px) auto auto;
+        grid-template-areas: "header image" "content image" "content image";
+        padding-left: 6vw;
+
+        @media (min-width: 1100px){
+            padding-left: 12vw;
+        }
+
+        .hero__logo{        
+            margin-top: 2vh;
+            grid-area: header;
+            align-self: center;
+            padding: 0;
+
+            img{
+                width: 24%;
+            }
+        }
+
+        .hero__image{
+            grid-area: image;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                // width: 100%;
+                // height: 100%;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top left;
+            }
+
+        }
+
+        .hero__content{
+            background: none;
+            padding: 0;
+            grid-area: content;
+            justify-items: flex-start;
+            text-align: left;
+            max-width: 75%;
+            margin: 0;
+            place-items: flex-start;
+            place-content: flex-start;
+            row-gap: 1.8em;
+
+            .hero__title{
+                font-size: 3.4rem;
+                margin-top: 10vh;
+                letter-spacing: .4ch;
+            }
+
+            .hero__about{
+                line-height: 1.8;
+                padding-right: 4vw;
+            }
+            
+            .hero__email{
+                
+                max-width: 95%;
+
+                .hero__email__input{
+                    font-size: 14px;
+                    padding-block: 1.3em;
+        
+                }
+            }
+        }
+    }
+}
