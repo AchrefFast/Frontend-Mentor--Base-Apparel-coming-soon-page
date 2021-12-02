@@ -43,8 +43,8 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ### Links
 
--  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--NFT-preview-card-componen)
-- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--NFT-preview-card-componen/)
+-  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--Base-Apparel-coming-soon-page)
+- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--Base-Apparel-coming-soon-page)
 
 ## My process
 
